@@ -18,6 +18,7 @@ defmodule NervesJpChartWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
+    live "/chart-sample", ChartSampleLive
   end
 
   # Other scopes may use custom stacks.
