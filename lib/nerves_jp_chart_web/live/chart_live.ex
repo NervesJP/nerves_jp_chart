@@ -37,6 +37,17 @@ defmodule NervesJpChartWeb.ChartLive do
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
     <script type="text/javascript" src="<%= System.get_env("NERVES_JP_CHART_CDN") %>/chartjs-plugin-streaming.js"></script>
+    <pre>
+    <strong>API使用例</strong>
+    nameは20文字まで
+
+    # Elixir
+    json = Jason.encode!(%{value: %{name: "nervesjp", value: 0.123}})
+    HTTPoison.post "https://vain-limegreen-pigeon.gigalixirapp.com/values", json, [{"Content-Type", "application/json"}]
+
+    # curl
+    curl -X POST -H "Content-Type: application/json" -d '{"value": {"name": "nervesjp", "value":0.123}}' https://vain-limegreen-pigeon.gigalixirapp.com/values
+    </pre>
     <pre><%= @values %></pre>
     """
   end
