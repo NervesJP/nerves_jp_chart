@@ -21,6 +21,7 @@ defmodule NervesJpChartWeb.Router do
 
     live "/", PageLive, :index
     live "/chart-sample", ChartSampleLive
+    live "/chart", ChartLive
   end
 
   # Other scopes may use custom stacks.
