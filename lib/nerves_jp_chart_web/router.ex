@@ -12,6 +12,8 @@ defmodule NervesJpChartWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+
+    resources "/values", NervesJpChartWeb.ValueController, except: [:new, :edit]
   end
 
   scope "/", NervesJpChartWeb do
