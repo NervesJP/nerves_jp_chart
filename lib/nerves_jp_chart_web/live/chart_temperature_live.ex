@@ -50,7 +50,8 @@ defmodule NervesJpChartWeb.ChartTemperatureLive do
     timeはUnix time
 
     # Elixir
-    json = Jason.encode!(%{value: %{name: "nervesjp", value: 25.123, time: 1605097502}})
+    time = Timex.now() |> Timex.to_unix()
+    json = Jason.encode!(%{value: %{name: "nervesjp", value: 25.123, time: time}})
     HTTPoison.post "https://vain-limegreen-pigeon.gigalixirapp.com/temperatures", json, [{"Content-Type", "application/json"}]
 
     # curl
