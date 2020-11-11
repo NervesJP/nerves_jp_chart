@@ -16,6 +16,8 @@
           <ul>
             <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
             <li><a href="https://github.com/NervesJP/nerves_jp_chart">GitHub</a></li>
+            <li><a href="/chart-temperature">Temperature</a></li>
+            <li><a href="/chart-humidity">Humidity</a></li>
             <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
               <li><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li>
             <% end %>

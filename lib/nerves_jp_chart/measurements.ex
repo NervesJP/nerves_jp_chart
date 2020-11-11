@@ -25,6 +25,10 @@ defmodule NervesJpChart.Measurements do
     Value |> where(user_id: ^user.id) |> last() |> Repo.one()
   end
 
+  def last_by_user(user, kind) do
+    Value |> where(user_id: ^user.id) |> where(kind: ^kind) |> last() |> Repo.one()
+  end
+
   @doc """
   Gets a single value.
 

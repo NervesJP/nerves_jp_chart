@@ -14,8 +14,8 @@ defmodule NervesJpChartWeb.Router do
     plug :accepts, ["json"]
 
     resources "/values", NervesJpChartWeb.ValueController, only: [:create, :show]
-    resources "/temperature", NervesJpChartWeb.TemperatureController, only: [:create, :show]
-    resources "/humidity", NervesJpChartWeb.HumidityController, only: [:create, :show]
+    resources "/temperatures", NervesJpChartWeb.TemperatureController, only: [:create, :show]
+    resources "/humidities", NervesJpChartWeb.HumidityController, only: [:create, :show]
   end
 
   scope "/", NervesJpChartWeb do
@@ -24,6 +24,8 @@ defmodule NervesJpChartWeb.Router do
     live "/", PageLive, :index
     live "/chart-sample", ChartSampleLive
     live "/chart", ChartLive
+    live "/chart-temperature", ChartTemperatureLive
+    live "/chart-humidity", ChartHumidityLive
   end
 
   # Other scopes may use custom stacks.
