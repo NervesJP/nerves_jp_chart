@@ -14,6 +14,8 @@ defmodule NervesJpChartWeb.Router do
     plug :accepts, ["json"]
 
     resources "/values", NervesJpChartWeb.ValueController, only: [:create, :show]
+    resources "/temperature", NervesJpChartWeb.TemperatureController, only: [:create, :show]
+    resources "/humidity", NervesJpChartWeb.HumidityController, only: [:create, :show]
   end
 
   scope "/", NervesJpChartWeb do
