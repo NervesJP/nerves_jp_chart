@@ -10,7 +10,7 @@ defmodule NervesJpChart.MeasurementsTest do
   describe "values" do
     alias NervesJpChart.Measurements.Value
 
-    @valid_attrs %{value: 120.5}
+    @valid_attrs %{value: 120.5, kind: 0, time: 0}
     @update_attrs %{value: 456.7}
     @invalid_attrs %{value: nil}
 

@@ -11,6 +11,6 @@ defmodule NervesJpChartWeb.ValueView do
   end
 
   def render("value.json", %{value: value}) do
-    %{id: value.id, value: value.value}
+    %{id: value.id, value: value.value, time: value.time}
   end
 end
