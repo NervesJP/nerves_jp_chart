@@ -2,7 +2,7 @@
 # from environment variables. You can also hardcode secrets,
 # although such is generally not recommended and you have to
 # remember to add this file to your .gitignore.
-use Mix.Config
+import Config
 
 database_url =
   System.get_env("DATABASE_URL") ||
@@ -12,7 +12,7 @@ database_url =
     """
 
 config :nerves_jp_chart, NervesJpChart.Repo,
-  ssl: true,
+  ssl: String.to_existing_atom(System.get_env("REPO_USE_SSL")),
   url: database_url,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 
@@ -39,3 +39,5 @@ config :nerves_jp_chart, NervesJpChartWeb.Endpoint,
 #
 # Then you can assemble a release by calling `mix release`.
 # See `mix help release` for more information.
+
+config :nerves_jp_chart, NervesJpChartWeb.Endpoint, server: true
