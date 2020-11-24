@@ -55,7 +55,7 @@ defmodule NervesJpChartWeb.ChartHumidityLive do
     HTTPoison.post "https://phx.japaneast.cloudapp.azure.com/humidities", json, [{"Content-Type", "application/json"}]
 
     # curl
-    curl -X POST -H "Content-Type: application/json" -d '{"value": {"name": "nervesjp", "value": 40.123, "time": 1605097502}}' https://vain-limegreen-pigeon.gigalixirapp.com/humidities
+    curl -X POST -H "Content-Type: application/json" -d '{"value": {"name": "nervesjp", "value": 40.123, "time": 1605097502}}' https://phx.japaneast.cloudapp.azure.com/humidities
     </pre>
     <pre><%= @values %></pre>
     """

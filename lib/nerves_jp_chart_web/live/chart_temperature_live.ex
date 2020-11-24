@@ -55,7 +55,7 @@ defmodule NervesJpChartWeb.ChartTemperatureLive do
     HTTPoison.post "https://phx.japaneast.cloudapp.azure.com/temperatures", json, [{"Content-Type", "application/json"}]
 
     # curl
-    curl -X POST -H "Content-Type: application/json" -d '{"value": {"name": "nervesjp", "value": 25.123, "time": 1605097502}}' https://vain-limegreen-pigeon.gigalixirapp.com/temperatures
+    curl -X POST -H "Content-Type: application/json" -d '{"value": {"name": "nervesjp", "value": 25.123, "time": 1605097502}}' https://phx.japaneast.cloudapp.azure.com/temperatures
     </pre>
     <pre><%= @values %></pre>
     """
