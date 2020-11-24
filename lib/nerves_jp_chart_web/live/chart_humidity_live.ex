@@ -52,7 +52,7 @@ defmodule NervesJpChartWeb.ChartHumidityLive do
     # Elixir
     time = Timex.now() |> Timex.to_unix()
     json = Jason.encode!(%{value: %{name: "nervesjp", value: 40.123, time: time}})
-    HTTPoison.post "https://vain-limegreen-pigeon.gigalixirapp.com/humidities", json, [{"Content-Type", "application/json"}]
+    HTTPoison.post "https://phx.japaneast.cloudapp.azure.com/humidities", json, [{"Content-Type", "application/json"}]
 
     # curl
     curl -X POST -H "Content-Type: application/json" -d '{"value": {"name": "nervesjp", "value": 40.123, "time": 1605097502}}' https://vain-limegreen-pigeon.gigalixirapp.com/humidities
