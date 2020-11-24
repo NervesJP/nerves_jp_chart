@@ -15,7 +15,6 @@ services:
       - DATABASE_HOST=db
       - DATABASE_URL=ecto://postgres:postgres@db/${DATABASE_DB}
       - REPO_USE_SSL=${REPO_USE_SSL}
-      - NERVES_JP_CHART_CDN=${NERVES_JP_CHART_CDN}
     ports:
       - 4000:4000
     networks:

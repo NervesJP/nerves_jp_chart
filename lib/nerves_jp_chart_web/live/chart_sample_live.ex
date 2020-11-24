@@ -30,7 +30,7 @@ defmodule NervesJpChartWeb.ChartSampleLive do
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
-    <script type="text/javascript" src="<%= System.get_env("NERVES_JP_CHART_CDN") %>/chartjs-plugin-streaming.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@latest/dist/chartjs-plugin-streaming.min.js"></script>
     <pre><%= @values %></pre>
     """
   end
