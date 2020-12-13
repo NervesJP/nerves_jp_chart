@@ -12,6 +12,8 @@ RUN mix local.hex --force && \
 
 # set build ENV
 ENV MIX_ENV=prod
+ARG NERVES_JP_CHART_HOST=phx.japaneast.cloudapp.azure.com
+ARG NERVES_JP_CHART_PORT=443
 
 # install mix dependencies
 COPY mix.exs mix.lock ./

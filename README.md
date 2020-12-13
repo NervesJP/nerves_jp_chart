@@ -18,3 +18,17 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+## Development Environment
+
+  * use docker-compose
+
+```
+cp .env.sample .env
+
+docker-compose build --build-arg NERVES_JP_CHART_HOST=localhost --build-arg NERVES_JP_CHART_PORT=4000
+
+docker-compose up
+```
+
+Visit http://localhost:4000/chart-sample
